@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>京东便利店线上超市 | 京便利(成都) — 京东便利西南大区战略合作伙伴</title>
-  <meta name="description" content="京便利（成都）商业管理有限公司，即时零售托管式运营服务商，京东便利西南大区战略合作伙伴。诚邀合伙人共同运营京东便利店线上超市，提供选址评估、线上运营、供应链对接、开业带店全流程支持。10家直营门店验证，5年+行业经验，覆盖眉山、德阳、什邡。咨询：199 3830 8496" />
+  <title>京东便利店线上超市 | 成都京便利 — 京东西南大区战略合作伙伴</title>
+  <meta name="description" content="成都京便利即时科技有限公司，即时零售托管式运营服务商，京东西南大区战略合作伙伴。诚邀合伙人共同运营京东便利店线上超市，提供选址评估、线上运营、供应链对接、开业带店全流程支持。10家直营门店验证，5年+行业经验，覆盖眉山、德阳、什邡。咨询：199 3830 8496" />
   <meta name="keywords" content="四川京东便利店线上超市,成都即时零售合作,京东便利合伙人四川,线上超市合作成都,即时零售合作" />
-  <meta property="og:title" content="京东便利店线上超市合伙人 | 京便利(成都)" />
-  <meta property="og:description" content="京东便利西南大区战略合作伙伴，10家直营门店验证，诚邀线上超市合伙人" />
+  <meta property="og:title" content="京东便利店线上超市合伙人 | 成都京便利" />
+  <meta property="og:description" content="京东西南大区战略合作伙伴，10家直营门店验证，诚邀线上超市合伙人" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.jingbianli.cn/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -773,15 +773,27 @@
       bottom: 0;
       width: 280px;
       background: white;
+      border-radius: 16px 0 0 16px;
       padding: 24px;
       transform: translateX(100%);
       transition: transform .3s ease;
+    }
+    .mobile-nav-panel .logo img,
+    .logo img,
+    header .logo img {
+      border-radius: 8px;
     }
     .mobile-nav.open .mobile-nav-panel { transform: translateX(0); }
     .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
     .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; }
     .mobile-nav a { display: block; padding: 14px 0; font-size: 16px; font-weight: 500; color: var(--gray-700); border-bottom: 1px solid var(--gray-100); }
     .mobile-nav a:hover { color: var(--jd-red); }
+    .mobile-nav-header .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
 
     /* ===== FLOATING CTA BAR (Mobile) ===== */
     .float-cta {
@@ -791,8 +803,8 @@
       z-index: 300;
       background: white;
       box-shadow: 0 -4px 20px rgba(0,0,0,.15);
-      padding: 12px 16px;
-      padding-bottom: calc(12px + env(safe-area-inset-bottom));
+      padding: 9px 14px;
+      padding-bottom: calc(9px + env(safe-area-inset-bottom));
       gap: 10px;
     }
     .float-cta-btn {
@@ -801,9 +813,9 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 13px 0;
+      padding: 11px 0;
       border-radius: 10px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
       border: none;
@@ -894,19 +906,18 @@
   <div class="mobile-nav-panel">
     <div class="mobile-nav-header">
       <a href="#" class="logo" style="font-size:18px;">
-        <img src="logo.png" alt="京便利" style="height:32px;width:auto;" />
+        <img src="logo.png" alt="京便利" style="height:36px;width:auto;" />
         <span>京便利</span>
       </a>
       <button class="mobile-nav-close" onclick="toggleMobileNav()">✕</button>
     </div>
-    <a href="#about" onclick="toggleMobileNav()">关于我们</a>
-    <a href="#why" onclick="toggleMobileNav()">为什么选我们</a>
-    <a href="#data" onclick="toggleMobileNav()">运营数据</a>
-    <a href="#process" onclick="toggleMobileNav()">合作流程</a>
-    <a href="#faq" onclick="toggleMobileNav()">常见问题</a>
-    <a href="#contact" onclick="toggleMobileNav()">联系我们</a>
-    <div style="margin-top:32px;">
-      <a href="tel:19938308496" class="btn btn-primary" style="width:100%;justify-content:center;">📞 立即致电</a>
+    <div class="mobile-nav-links">
+      <a href="#about">关于我们</a>
+      <a href="#why">为什么选我们</a>
+      <a href="#data">运营数据</a>
+      <a href="#process">合作流程</a>
+      <a href="#faq">常见问题</a>
+      <a href="#contact">联系我们</a>
     </div>
   </div>
 </div>
@@ -965,8 +976,8 @@
         <div class="proof-item">
           <div class="proof-icon">🤝</div>
           <div class="proof-text">
-            <strong>京东便利战略合作</strong>
-            <span>西南大区战略合作伙伴 · 品牌授权 · 供应链对接 · 运营赋能</span>
+            <strong>京东便利店战略合作</strong>
+            <span>京东西南大区战略合作伙伴 · 品牌授权 · 供应链对接 · 运营赋能</span>
           </div>
         </div>
         <div class="proof-item">
@@ -987,13 +998,13 @@
     <div class="about-grid">
       <div>
         <div class="section-label">关于我们</div>
-        <h2 class="section-title">5年+经验 · 10家直营门店<br/>更懂四川的京东便利</h2>
-        <p class="section-sub">京便利（成都）是即时零售托管式运营服务商，核心团队拥有5年+即时零售运营经验，已在成都验证10家直营门店运营模型，覆盖高新区、锦江区、武侯区、金牛区等6个核心城区，涵盖居住区、商业办公、酒店高流动全场景。成都武侯中心仓稳定运营，1500+ SKU；2026年眉山、德阳、什邡标杆店即将落成。</p>
+        <h2 class="section-title">5年+经验 · 10家直营门店<br/>更懂四川的京东便利店</h2>
+        <p class="section-sub">成都京便利即时科技有限公司是即时零售托管式运营服务商，核心团队拥有5年+即时零售运营经验，已在成都验证10家直营门店运营模型，覆盖高新区、锦江区、武侯区、金牛区等6个核心城区，涵盖居住区、商业办公、酒店高流动全场景。成都双流中心仓稳定运营1500+ SKU，产品团队每月迭代约10%的产品，同时依托京东物流高效覆盖全川当日/次日达。2026年眉山、德阳、什邡标杆店即将落成。</p>
         <div class="about-features">
           <div class="about-feature">
             <div class="about-feature-icon">🏆</div>
             <h4>京东战略合作</h4>
-            <p>京东便利西南大区战略合作伙伴，合规使用京东品牌背书</p>
+            <p>京东西南大区战略合作伙伴，合规使用京东便利店品牌背书</p>
           </div>
           <div class="about-feature">
             <div class="about-feature-icon">📍</div>
@@ -1003,7 +1014,7 @@
           <div class="about-feature">
             <div class="about-feature-icon">🚚</div>
             <h4>中心仓已就位</h4>
-            <p>成都武侯中心仓运营中，高频SKU 1500+，支撑全川供货</p>
+            <p>成都双流中心仓稳定运营1500+ SKU，依托京东物流高效覆盖全川当日/次日达</p>
           </div>
           <div class="about-feature">
             <div class="about-feature-icon">📱</div>
@@ -1015,7 +1026,7 @@
       <div>
         <img src="store_map.jpg" alt="京便利成都直营门店分布" style="width:100%;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.12);" />
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
-          <span style="background:#FFF1F0;color:var(--jd-red);font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;border:1px solid rgba(226,35,26,.3);">京东便利战略合作</span>
+          <span style="background:#FFF1F0;color:var(--jd-red);font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;border:1px solid rgba(226,35,26,.3);">京东便利店战略合作</span>
           <span style="background:var(--gray-100);color:var(--gray-700);font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;">美团 KA</span>
           <span style="background:var(--gray-100);color:var(--gray-700);font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;">饿了么 KA</span>
           <span style="background:var(--gray-100);color:var(--gray-700);font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;">京东自营标签</span>
@@ -1042,28 +1053,28 @@
       </div>
       <div class="why-card">
         <div class="why-num">02</div>
-        <h3>轻资产 · 低门槛</h3>
-        <p>成都中心仓高周转供货，门店无需大量积压库存，手里永远握着现金流。成熟供应链体系将开店综合成本降至竞争对手的60%-80%，小城市也能开得起。</p>
+        <h3>全场景全赛道验证</h3>
+        <p>10家直营门店验证了居住区、商业办公区、酒店高流动区、学校医院区等全场景运营能力。在成都竞争最激烈的市场跑通了货盘和模型——复制到你的城市，只会更容易。欢迎来成都看店，先看再决定。</p>
       </div>
       <div class="why-card">
         <div class="why-num">03</div>
         <h3>前美团/哈啰/抖音高管带队</h3>
-        <p>核心团队来自美团、哈啰、抖音等大厂，将互联网精细化运营逻辑引入便利店赛道。6%-9% 月度货盘迭代率，全渠道深度操盘美团/饿了么，流量收割不停歇。</p>
+        <p>核心团队来自美团、哈啰、抖音等大厂，将互联网精细化运营逻辑引入便利店赛道。约10% 月度货盘迭代率，全渠道深度运营美团/淘宝闪购/京东平台，让一群了解平台流量规则的人来操盘流量。</p>
       </div>
       <div class="why-card">
         <div class="why-num">04</div>
+        <h3>轻资产 · 低门槛</h3>
+        <p>成都中心仓高周转供货，门店无需大量积压库存，手里永远握着现金流。成熟供应链体系将开店综合成本降至竞争对手的60%-80%，小城市也能开得起。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
         <h3>科学门店管理</h3>
         <p>专业门店动线设计、库位盒设计，单量再大也能从容应对。持续迭代的培训体系和管理方法论，拒绝「交费后消失」，手把手带教，真正把能力留在你手里。</p>
       </div>
       <div class="why-card">
-        <div class="why-num">05</div>
+        <div class="why-num">06</div>
         <h3>0经验也能开</h3>
         <p>不需要你懂电商、懂运营、懂供应链。从选址评估到开业带店，全程有团队跟。你只需要做最重要的决策：来成都看看。</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num">06</div>
-        <h3>全场景全赛道验证</h3>
-        <p>10家直营门店验证了居住区、商业办公区、酒店高流动区、学校医院区等全场景运营能力。在成都竞争最激烈的市场跑通了货盘和模型——复制到你的城市，只会更容易。欢迎来成都看店，先看再决定。</p>
       </div>
     </div>
 
@@ -1115,10 +1126,10 @@
     <div class="brand-logos">
       <div class="brand-logo-item">
         <div class="brand-logo-icon" style="color:#E2231A;font-size:14px;">JD</div>
-        <div class="brand-logo-label">京东便利</div>
+        <div class="brand-logo-label">京东便利店</div>
       </div>
       <div class="brand-logo-item">
-        <div class="brand-logo-icon">猩</div>
+        <div class="brand-logo-icon"><img src="shangouxing_logo.png" alt="闪购猩" style="width:36px;height:36px;border-radius:6px;object-fit:contain;" /></div>
         <div class="brand-logo-label">闪购猩</div>
       </div>
       <div class="brand-logo-item">
@@ -1203,7 +1214,7 @@
           京便利和京东是什么关系？正规授权吗？
           <div class="faq-icon">+</div>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">京便利（成都）商业管理有限公司是即时零售托管式运营服务商，也是京东便利西南大区战略合作伙伴，使用京东便利品牌、接入京东供应链、享有京东官方运营赋能。同时持有美团/饿了么KA资质和京东自营店标签。具体合作授权文件可在考察时面对面核验。</div></div>
+        <div class="faq-a"><div class="faq-a-inner">成都京便利即时科技有限公司是即时零售托管式运营服务商，也是京东西南大区战略合作伙伴，使用京东便利店品牌、接入京东供应链、享有京东官方运营赋能。同时持有美团/饿了么KA资质和京东自营店标签。具体合作授权文件可在考察时面对面核验。</div></div>
       </div>
 
       <div class="faq-item">
@@ -1277,7 +1288,7 @@
           <div class="contact-detail-icon">🏢</div>
           <div>
             <strong>公司名称</strong>
-            <span>京便利（成都）商业管理有限公司</span>
+            <span>成都京便利即时科技有限公司</span>
           </div>
         </div>
       </div>
@@ -1386,7 +1397,7 @@
           <img src="logo.png" alt="京便利" style="height:40px;width:auto;" />
           <span>京便利</span>
         </a>
-        <p>京便利（成都）商业管理有限公司<br/>即时零售托管式运营服务商<br/>京东便利西南大区战略合作伙伴<br/>诚邀京东便利店线上超市合伙人</p>
+        <p>成都京便利即时科技有限公司<br/>即时零售托管式运营服务商<br/>京东西南大区战略合作伙伴<br/>诚邀京东便利店线上超市合伙人</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
@@ -1406,7 +1417,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 京便利（成都）商业管理有限公司 版权所有</span>
+      <span>© 2026 成都京便利即时科技有限公司 版权所有</span>
       <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.45);transition:color .2s;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.45)'">蜀ICP备2026018674号-1</a>
     </div>
   </div>
@@ -1421,6 +1432,22 @@
   }
   document.getElementById('mobileNav').addEventListener('click', function(e) {
     if (e.target === this) toggleMobileNav();
+  });
+
+  // Sidebar anchor links: scroll first, then close sidebar after animation
+  document.querySelectorAll('.mobile-nav-links a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Close sidebar after scroll animation completes
+        setTimeout(function() {
+          toggleMobileNav();
+        }, 320);
+      }
+    });
   });
 
   // FAQ accordion
