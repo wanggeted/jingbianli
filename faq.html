@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>常见问题 | 京便利（成都）京东便利店招商</title>
+  <meta name="description" content="京便利招商常见问题解答：投资多少钱、能赚多少、如何加盟、京东与京便利的关系、开业后的支持等。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Noto Sans SC', -apple-system, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    :root {
+      --jd-red: #E2231A; --jd-red-dark: #B71C16;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB;
+      --gray-500: #6B7280; --gray-700: #374151; --gray-900: #111827;
+      --max-w: 800px;
+    }
+    /* Header */
+    header { background: var(--gray-900); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; color: white; font-weight: 700; font-size: 18px; }
+    .logo-icon { width: 32px; height: 32px; background: var(--jd-red); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 14px; }
+    .back-link { color: rgba(255,255,255,.6); font-size: 14px; display: flex; align-items: center; gap: 4px; }
+    .back-link:hover { color: white; }
+
+    /* Main */
+    .page-hero { background: var(--gray-900); color: white; padding: 48px 24px 56px; text-align: center; }
+    .page-hero h1 { font-size: clamp(24px, 5vw, 36px); font-weight: 900; margin-bottom: 12px; }
+    .page-hero p { color: rgba(255,255,255,.55); font-size: 15px; }
+
+    .faq-page { max-width: var(--max-w); margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* Category */
+    .faq-category { margin-bottom: 40px; }
+    .faq-category-title {
+      font-size: 13px; font-weight: 700; color: var(--jd-red);
+      text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--jd-red);
+      display: inline-block;
+    }
+
+    /* FAQ item */
+    .faq-item { border: 1px solid var(--gray-200); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 20px; background: white; border: none; cursor: pointer;
+      font-size: 15px; font-weight: 600; text-align: left; color: var(--gray-900);
+      gap: 16px;
+    }
+    .faq-q:hover { background: var(--gray-50); }
+    .faq-icon {
+      width: 26px; height: 26px; border-radius: 50%; background: var(--gray-100);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; flex-shrink: 0;
+      color: var(--gray-500); transition: all .2s;
+    }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-a-inner { padding: 0 20px 20px; font-size: 14px; color: var(--gray-700); line-height: 1.8; }
+    .faq-item.open .faq-q { background: var(--gray-50); }
+    .faq-item.open .faq-icon { background: var(--jd-red); color: white; transform: rotate(45deg); }
+    .faq-item.open .faq-a { max-height: 400px; }
+
+    /* CTA */
+    .faq-cta { background: var(--gray-900); border-radius: 20px; padding: 40px 32px; text-align: center; margin-top: 48px; }
+    .faq-cta h2 { color: white; font-size: 22px; font-weight: 900; margin-bottom: 10px; }
+    .faq-cta p { color: rgba(255,255,255,.5); font-size: 14px; margin-bottom: 24px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 50px; font-weight: 700; font-size: 15px; cursor: pointer; border: none; }
+    .btn-red { background: var(--jd-red); color: white; }
+    .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,.3); color: white; }
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .cta-phone { font-size: 28px; font-weight: 900; color: white; margin: 16px 0 4px; letter-spacing: 1px; }
+    .cta-sub { font-size: 13px; color: rgba(255,255,255,.4); }
+
+    /* Floating bar */
+    .float-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300; background: white; box-shadow: 0 -4px 20px rgba(0,0,0,.15); padding: 12px 16px; padding-bottom: calc(12px + env(safe-area-inset-bottom)); gap: 10px; }
+    .float-cta-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 13px 0; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; border: none; }
+    .float-cta-call { background: var(--jd-red); color: white; text-decoration: none; }
+    .float-cta-wechat { background: #07C160; color: white; }
+    @media (max-width: 768px) { .float-cta { display: flex; } body { padding-bottom: 80px; } }
+
+    /* Wechat modal */
+    .wechat-modal { display: none; position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,.6); align-items: center; justify-content: center; }
+    .wechat-modal.open { display: flex; }
+    .wechat-modal-box { background: white; border-radius: 20px; padding: 28px 24px 24px; max-width: 280px; width: 90%; text-align: center; position: relative; }
+    .wechat-modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 22px; cursor: pointer; color: #999; }
+    .wechat-modal-box img { width: 180px; margin: 12px auto 0; border-radius: 8px; }
+
+    /* Footer */
+    footer { background: var(--gray-900); color: rgba(255,255,255,.45); padding: 32px 24px 24px; font-size: 13px; text-align: center; }
+    footer a { color: rgba(255,255,255,.45); }
+    footer a:hover { color: rgba(255,255,255,.8); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="京便利" style="height:32px;width:auto;" />
+      <span>京便利</span>
+    </a>
+    <a href="index.html" class="back-link">← 返回主页</a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>常见问题解答</h1>
+  <p>找不到答案？扫码添加企业微信顾问，或致电 199-3830-8496</p>
+</div>
+
+<div class="faq-page">
+
+  <!-- 第一类：能赚到钱吗 -->
+  <div class="faq-category">
+    <div class="faq-category-title">💰 收益与投资回报</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        开一家店大概能赚多少钱？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">成都已运营门店的实际月净利区间在5,000元至20,000元以上，受选址、城市能级、运营能力影响较大。我们不做模糊承诺——欢迎来成都直接看后台数据，真实的单店GMV和毛利当面给你看，先看数据再判断。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        开一家店大概要投入多少钱？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">投资额因城市、面积、选址等差异较大，需要根据你的具体情况定制方案。请联系燕经理（199 3830 8496 / 企业微信），告知你的城市和预算范围，我们会给你出一份针对性的测算方案。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        大概多久能回本？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">回本周期取决于投资额、门店月流水和运营成本，在不同城市和选址差异很大。我们建议来成都实地考察，核实真实门店数据后，根据你的目标城市和资金做定制化测算，这样最准确。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        县城市场真的有机会吗？现在还不晚？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">现在是县域即时零售最好的窗口期。大多数县城目前还是夫妻小卖部的天下，线上超市渗透率极低。我们2026年在德阳、眉山、什邡建标杆店，就是要抢这个先机。越早入场，选址越好、竞争越少。</div></div>
+    </div>
+  </div>
+
+  <!-- 第二类：你们靠不靠谱 -->
+  <div class="faq-category">
+    <div class="faq-category-title">🏆 品牌与资质</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        京便利和京东是什么关系？正规授权吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">京便利（成都）商业管理有限公司是京东便利在四川的战略合作伙伴，使用京东便利品牌、接入京东供应链、享有京东官方运营赋能。同时持有美团/饿了么KA资质和京东自营店标签。具体合作授权文件可在考察时面对面核验。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        你们有多少家在开的店？能去看吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">目前成都有10家直营+代运营门店正常营业，分布在成华区、锦江区、金牛区、青羊区、武侯区、高新区，涵盖居住区、商办楼、高流动区等全场景。随时可预约来看——真店、真运营，你可以当场问门店数据。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        京东便利和美团闪购、天猫超市有什么区别？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">京东便利是线下实体店+线上打通的模式，品牌可信度高，适合30分钟达的即时零售；美团闪购依赖平台流量，自主性弱；天猫超市以大仓配货为主，时效受限。在县域市场，京东品牌背书 + 本地实体店的组合最有竞争力。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        中心仓是什么？对我开店有什么用？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">成都中心仓目前已覆盖1500+高频SKU，支持全川次日达供货。对你的好处是：门店无需大量压货，减少库存占用资金；货品补充快、选品有人管；综合开店成本比自己进货降低20-40%。</div></div>
+    </div>
+  </div>
+
+  <!-- 第三类：我能不能做 -->
+  <div class="faq-category">
+    <div class="faq-category-title">🙋 我能不能做</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        我没做过零售/线上运营，能开吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">完全可以。我们的核心定位就是「让不懂运营的人也能开好京东便利店」。从选址评估、装修指导、货品陈列、线上运营到开业带店，全部有专业团队跟。你需要做的，只是最终的投资决策。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        成都市区还能做吗？还是只适合开县城？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">成都市区我们目前已有10家门店在运营，主要以「代运营合作」模式为主（你投资，我们运营）。县城和地级市是主推方向，空白市场大、竞争少、先发优势明显。两种模式我们都欢迎咨询。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        开业之后出了问题，有人管吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">有。开业后运营团队驻场带店30天，帮你建立标准SOP；稳定后转为远程支持，微信群+电话随时响应。供应链和货品问题由成都中心仓统一协调，你永远不是自己一个人面对问题。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        我在外省，也能做吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">目前我们重点开发四川省内（成都+地级市+县域）以及云贵川渝毗邻区域。供应链和运营支持以四川为核心辐射范围。有外省意向欢迎联系详聊，我们会根据实际情况判断可行性。</div></div>
+    </div>
+  </div>
+
+  <!-- 第四类：怎么开始 -->
+  <div class="faq-category">
+    <div class="faq-category-title">📞 怎么开始合作</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        我怎么开始了解？有什么门槛吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">没有门槛。最简单的方式是扫码添加燕经理企业微信（燕学函 @京便利即时科技），告诉她你在哪个城市、大概什么预算，她会给你发一份适合你情况的初步方案和测算参考。不用飞来成都，先聊再说。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        可以先来成都看看你们的店吗？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">随时欢迎。10家直营+代运营店分布在成都各区，预约后可实地参观运营实况、查看仓储物流，和运营团队面对面交流。先看再决定，这是我们最推荐的方式。预约电话：199 3830 8496（燕经理）。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        合作流程是怎样的？从咨询到开店要多久？
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">标准流程：① 电话/微信初步沟通 → ② 来成都考察门店 → ③ 确认方案签订协议 → ④ 协助选址装修 → ⑤ 开业带店30天。从签约到开业通常需要1-3个月，具体取决于选址进度和装修情况。</div></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="faq-cta">
+    <h2>还有问题？直接问</h2>
+    <p>我们不是客服，是真正管店的运营团队。</p>
+    <div class="cta-phone">199-3830-8496</div>
+    <div class="cta-sub">燕经理 · 工作日 9:00-22:00</div>
+    <div class="btn-group" style="margin-top:24px;">
+      <a href="tel:19938308496" class="btn btn-red">📞 立即致电</a>
+      <button class="btn btn-outline" onclick="openWechat()">💬 加微信咨询</button>
+      <a href="index.html#contact" class="btn btn-outline">📋 填写咨询表单</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Floating CTA -->
+<div class="float-cta" id="floatCta">
+  <a href="tel:19938308496" class="float-cta-btn float-cta-call">📞 立即致电</a>
+  <button class="float-cta-btn float-cta-wechat" onclick="openWechat()">💬 加微信咨询</button>
+</div>
+
+<!-- WeChat Modal -->
+<div class="wechat-modal" id="wechatModal" onclick="closeWechat(event)">
+  <div class="wechat-modal-box">
+    <button class="wechat-modal-close" onclick="closeWechat()">×</button>
+    <div style="font-size:16px;font-weight:700;">京便利·合作中心</div>
+    <div style="font-size:13px;color:#666;margin-top:6px;">扫码添加招商顾问</div>
+    <img src="ewechat_qr.jpg" alt="燕学函企业微信二维码" />
+    <div style="font-size:14px;font-weight:700;color:#E2231A;margin-top:8px;">燕学函 @京便利即时科技</div>
+    <div style="font-size:12px;color:#999;margin-top:4px;">扫码添加企业微信咨询</div>
+  </div>
+</div>
+
+<footer>
+  <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">蜀ICP备2026018674号-1</a>
+  &nbsp;|&nbsp;
+  <span>© 2026 京便利（成都）商业管理有限公司</span>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+  function openWechat() {
+    document.getElementById('wechatModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeWechat(e) {
+    if (!e || e.target === document.getElementById('wechatModal') || e.target.classList.contains('wechat-modal-close')) {
+      document.getElementById('wechatModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+</script>
+</body>
+</html>
