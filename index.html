@@ -684,6 +684,15 @@
       background: white;
     }
     .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select {
+      padding-right: 36px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
     .form-submit { width: 100%; margin-top: 8px; font-size: 16px; padding: 16px; }
     .form-note {
       font-size: 12px;
@@ -1080,7 +1089,7 @@
   <div class="container">
       <div style="text-align:center;">
       <div class="section-label">差异化优势</div>
-      <h2 class="section-title">为什么合伙人都选了京便利</h2>
+      <h2 class="section-title">为什么选择京便利？</h2>
       <p class="section-sub" style="margin:0 auto 48px;">我们比你自己摸索省时间、比纯甩手掌柜有保障、比外省品牌更懂本地。</p>
     </div>
     <div class="why-grid">
@@ -1348,44 +1357,36 @@
               <label>意向合作城市 *</label>
               <select name="city" required>
                 <option value="">请选择意向城市</option>
-                <optgroup label="成都市">
-                  <option value="成都市">成都市</option>
-                </optgroup>
-                <optgroup label="地级市">
-                  <option value="自贡市">自贡市</option>
-                  <option value="攀枝花市">攀枝花市</option>
-                  <option value="泸州市">泸州市</option>
-                  <option value="德阳市">德阳市</option>
-                  <option value="绵阳市">绵阳市</option>
-                  <option value="广元市">广元市</option>
-                  <option value="遂宁市">遂宁市</option>
-                  <option value="内江市">内江市</option>
-                  <option value="乐山市">乐山市</option>
-                  <option value="南充市">南充市</option>
-                  <option value="眉山市">眉山市</option>
-                  <option value="宜宾市">宜宾市</option>
-                  <option value="广安市">广安市</option>
-                  <option value="达州市">达州市</option>
-                  <option value="雅安市">雅安市</option>
-                  <option value="巴中市">巴中市</option>
-                  <option value="资阳市">资阳市</option>
-                </optgroup>
-                <optgroup label="自治州">
-                  <option value="阿坝藏族羌族自治州">阿坝藏族羌族自治州</option>
-                  <option value="甘孜藏族自治州">甘孜藏族自治州</option>
-                  <option value="凉山彝族自治州">凉山彝族自治州</option>
-                </optgroup>
-                <optgroup label="其他">
-                  <option value="云贵川渝其他城市">云贵川渝其他城市</option>
-                  <option value="其他地区">其他地区（暂不考虑）</option>
-                </optgroup>
+                <option value="成都市">成都市</option>
+                <option value="自贡市">自贡市</option>
+                <option value="攀枝花市">攀枝花市</option>
+                <option value="泸州市">泸州市</option>
+                <option value="德阳市">德阳市</option>
+                <option value="绵阳市">绵阳市</option>
+                <option value="广元市">广元市</option>
+                <option value="遂宁市">遂宁市</option>
+                <option value="内江市">内江市</option>
+                <option value="乐山市">乐山市</option>
+                <option value="南充市">南充市</option>
+                <option value="眉山市">眉山市</option>
+                <option value="宜宾市">宜宾市</option>
+                <option value="广安市">广安市</option>
+                <option value="达州市">达州市</option>
+                <option value="雅安市">雅安市</option>
+                <option value="巴中市">巴中市</option>
+                <option value="资阳市">资阳市</option>
+                <option value="阿坝藏族羌族自治州">阿坝藏族羌族自治州</option>
+                <option value="甘孜藏族自治州">甘孜藏族自治州</option>
+                <option value="凉山彝族自治州">凉山彝族自治州</option>
+                <option value="云贵川渝其他城市">云贵川渝其他城市</option>
+                <option value="其他地区">其他地区（暂不考虑）</option>
               </select>
             </div>
             <div class="form-group">
               <label>意向类型</label>
               <select name="type">
                 <option value="">请选择</option>
-                <option value="合伙人">想成为京东便利店线上超市合伙人</option>
+                <option value="合伙人">想开一家线上超市</option>
                 <option value="代运营">希望代运营合作</option>
                 <option value="考察">想来成都预约合作考察</option>
                 <option value="其他">其他咨询</option>
