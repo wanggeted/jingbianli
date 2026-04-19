@@ -157,7 +157,7 @@
       font-weight: 900;
       font-size: 16px;
     }
-    .logo span { color: var(--jd-red); }
+    .logo span { color: #C0221A; }
     .nav { display: flex; align-items: center; gap: 32px; }
     .nav a {
       font-size: 14px;
@@ -758,8 +758,9 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.6);
       z-index: 200;
+      backdrop-filter: blur(4px);
     }
     .mobile-nav.open { display: block; }
     .mobile-nav-panel {
@@ -767,28 +768,62 @@
       right: 0;
       top: 0;
       bottom: 0;
-      width: 280px;
-      background: white;
+      width: 260px;
+      background: #111;
       border-radius: 16px 0 0 16px;
-      padding: 24px;
+      padding: 32px 28px;
       transform: translateX(100%);
-      transition: transform .3s ease;
-    }
-    .mobile-nav-panel .logo img,
-    .logo img,
-    header .logo img {
-      border-radius: 8px;
+      transition: transform .3s cubic-bezier(.4,0,.2,1);
+      display: flex;
+      flex-direction: column;
     }
     .mobile-nav.open .mobile-nav-panel { transform: translateX(0); }
-    .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
-    .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; }
-    .mobile-nav a { display: block; padding: 14px 0; font-size: 16px; font-weight: 500; color: var(--gray-700); border-bottom: 1px solid var(--gray-100); }
-    .mobile-nav a:hover { color: var(--jd-red); }
-    .mobile-nav-header .logo {
+    .mobile-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .mobile-nav-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+    .mobile-nav-close {
+      background: rgba(255,255,255,.08);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 16px;
+      color: rgba(255,255,255,.5);
+      cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
+      justify-content: center;
+      transition: background .2s;
+    }
+    .mobile-nav-close:hover { background: rgba(255,255,255,.15); color: white; }
+    .mobile-nav-links { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav-links a {
+      display: block;
+      padding: 13px 0;
+      font-size: 17px;
+      font-weight: 500;
+      color: rgba(255,255,255,.55);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      letter-spacing: .5px;
+      transition: color .2s, padding-left .2s;
+    }
+    .mobile-nav-links a:hover { color: white; padding-left: 4px; }
+    .mobile-nav-links a:last-child { border-bottom: none; }
+    .mobile-nav-footer {
+      margin-top: auto;
+      padding-top: 24px;
+      font-size: 12px;
+      color: rgba(255,255,255,.2);
     }
 
     /* ===== FLOATING CTA BAR (Mobile) ===== */
@@ -864,6 +899,7 @@
       background: none; border: none;
       font-size: 22px; cursor: pointer; color: #999;
     }
+    .logo img { border-radius: 8px; }
     .wechat-modal-box img { width: 180px; margin: 12px auto 0; border-radius: 8px; }
     .wechat-modal-title { font-size: 16px; font-weight: 700; }
     .wechat-modal-sub { font-size: 13px; color: #666; margin-top: 6px; }
@@ -909,10 +945,7 @@
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-panel">
     <div class="mobile-nav-header">
-      <a href="#" class="logo" style="font-size:18px;">
-        <img src="logo.png" alt="京便利" style="height:36px;width:auto;" />
-        <span>京便利</span>
-      </a>
+      <span class="mobile-nav-label">导航</span>
       <button class="mobile-nav-close" onclick="toggleMobileNav()">✕</button>
     </div>
     <div class="mobile-nav-links">
@@ -923,6 +956,7 @@
       <a href="#faq">常见问题</a>
       <a href="#contact">联系我们</a>
     </div>
+
   </div>
 </div>
 
