@@ -485,24 +485,20 @@
       font-weight: 500;
     }
     .brand-logos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px 16px;
       margin-top: 48px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .brand-logos-group {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-    }
-    .brand-logos-divider {
-      width: 1px;
-      height: 60px;
-      background: rgba(255,255,255,.15);
-      margin: 0 32px;
+    @media (max-width: 480px) {
+      .brand-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 24px;
+        max-width: 280px;
+      }
     }
     .brand-logo-item {
       display: flex;
@@ -1184,29 +1180,21 @@
       </div>
     </div>
     <div class="brand-logos">
-      <!-- 品牌 Logo 组 -->
-      <div class="brand-logos-group">
-        <div class="brand-logo-item">
-          <div class="brand-logo-icon" style="color:#E2231A;font-size:22px;font-weight:900;letter-spacing:-1px;">JD</div>
-          <div class="brand-logo-label">京东便利店</div>
-        </div>
-        <div class="brand-logo-item">
-          <div class="brand-logo-icon"><img src="shangouxing_logo_v2.png" alt="闪购猩超市" width="144" height="144" style="width:52px;height:52px;border-radius:10px;object-fit:contain;" /></div>
-          <div class="brand-logo-label">闪购猩超市</div>
-        </div>
+      <div class="brand-logo-item">
+        <div class="brand-logo-icon" style="color:#E2231A;font-size:22px;font-weight:900;letter-spacing:-1px;">JD</div>
+        <div class="brand-logo-label">京东便利店</div>
       </div>
-      <!-- 分隔线 -->
-      <div class="brand-logos-divider"></div>
-      <!-- 能力标签组 -->
-      <div class="brand-logos-group">
-        <div class="brand-logo-item">
-          <div class="brand-logo-icon">仓</div>
-          <div class="brand-logo-label">成都中心仓</div>
-        </div>
-        <div class="brand-logo-item">
-          <div class="brand-logo-icon">川</div>
-          <div class="brand-logo-label">覆盖四川</div>
-        </div>
+      <div class="brand-logo-item">
+        <div class="brand-logo-icon"><img src="shangouxing_logo_v2.png" alt="闪购猩超市" width="144" height="144" style="width:52px;height:52px;border-radius:10px;object-fit:contain;" /></div>
+        <div class="brand-logo-label">闪购猩超市</div>
+      </div>
+      <div class="brand-logo-item">
+        <div class="brand-logo-icon">仓</div>
+        <div class="brand-logo-label">成都中心仓</div>
+      </div>
+      <div class="brand-logo-item">
+        <div class="brand-logo-icon">川</div>
+        <div class="brand-logo-label">覆盖四川</div>
       </div>
     </div>
   </div>
